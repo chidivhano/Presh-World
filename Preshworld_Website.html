@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preshworld Culinary Academy & Bakery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-magenta': '#941B54',
+                        'brand-navy': '#1B264F',
+                        'brand-pink': '#FDF8FA',
+                        'brand-white': '#FFFFFF',
+                    },
+                    fontFamily: {
+                        'serif': ['Merriweather', 'serif'],
+                        'sans': ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700&display=swap');
+        html { scroll-padding-top: 80px; }
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-serif { font-family: 'Merriweather', serif; }
+    </style>
+</head>
+<body class="bg-brand-pink text-brand-navy antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 top-0 bg-brand-white shadow-md border-b-2 border-brand-magenta">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <img src="logo.png" alt="Preshworld Logo" class="h-12 w-12 rounded-full border-2 border-brand-magenta object-cover">
+                    <a href="#home" class="flex flex-col justify-center">
+                        <span class="text-2xl font-black text-brand-navy leading-none tracking-tight">PRESHWORLD</span>
+                        <span class="text-[10px] font-semibold text-brand-magenta tracking-widest uppercase">Culinary Academy</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-8 items-center text-sm font-bold tracking-wide text-brand-navy">
+                    <a href="#home" class="hover:text-brand-magenta transition">HOME</a>
+                    <a href="#about" class="hover:text-brand-magenta transition">ABOUT</a>
+                    <a href="#bakery" class="hover:text-brand-magenta transition">BAKERY</a>
+                    <a href="#classes" class="hover:text-brand-magenta transition">CLASSES</a>
+                    <a href="#gallery" class="hover:text-brand-magenta transition">GALLERY</a>
+                    <a href="#contact" class="hover:text-brand-magenta transition">CONTACT</a>
+                    <a href="tel:0782044659" class="bg-brand-magenta text-brand-white px-6 py-2.5 rounded-full hover:bg-pink-800 transition shadow-md flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i> Call Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-navy hover:text-brand-magenta focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-white border-t border-gray-100 shadow-xl absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1 text-center font-bold text-brand-navy">
+                <a href="#home" class="block px-3 py-3 hover:bg-brand-pink hover:text-brand-magenta transition rounded">HOME</a>
+                <a href="#about" class="block px-3 py-3 hover:bg-brand-pink hover:text-brand-magenta transition rounded">ABOUT</a>
+                <a href="#bakery" class="block px-3 py-3 hover:bg-brand-pink hover:text-brand-magenta transition rounded">BAKERY</a>
+                <a href="#classes" class="block px-3 py-3 hover:bg-brand-pink hover:text-brand-magenta transition rounded">CLASSES</a>
+                <a href="#gallery" class="block px-3 py-3 hover:bg-brand-pink hover:text-brand-magenta transition rounded">GALLERY</a>
+                <a href="#contact" class="block px-3 py-3 hover:bg-brand-pink hover:text-brand-magenta transition rounded">CONTACT</a>
+                <div class="pt-4 mt-2 border-t border-gray-100">
+                    <a href="tel:0782044659" class="block bg-brand-magenta text-brand-white px-5 py-3 rounded-full hover:bg-pink-800 transition w-full shadow">Call Us Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-[80px] min-h-[85vh] flex items-center justify-center overflow-hidden bg-brand-navy">
+        <div class="absolute inset-0 w-full h-full">
+            <img src="hero.jpg" alt="Preshworld Bakery Background" class="w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10 py-16">
+            <div class="max-w-2xl">
+                <span class="inline-block py-1.5 px-4 bg-brand-magenta text-brand-white font-bold text-xs tracking-widest mb-6 rounded-full uppercase shadow-md">Protea Glen, Soweto</span>
+                
+                <h1 class="text-4xl md:text-6xl font-serif font-black text-brand-white mb-6 leading-tight">
+                    Preciously made.<br>
+                    <span class="text-brand-magenta italic">Preciously done.</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-xl font-light">
+                    Passion in the kitchen. Excellence in everything we do. Join our accredited culinary academy or indulge in our exquisite bakery and confectionery.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#classes" class="text-center bg-brand-magenta text-brand-white font-bold py-3.5 px-8 rounded-full hover:bg-pink-800 transition shadow-lg text-lg">View Baking Classes</a>
+                    <a href="#bakery" class="text-center bg-transparent border-2 border-brand-white text-brand-white font-bold py-3.5 px-8 rounded-full hover:bg-brand-white hover:text-brand-navy transition text-lg flex items-center justify-center gap-2">
+                        Explore Our Bakery
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-brand-pink">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-16 max-w-6xl mx-auto">
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-brand-magenta/10 rounded-2xl transform -rotate-3"></div>
+                    <!-- Updated image source to chef.png -->
+                    <img src="chef.png" alt="Chef Instructor at Preshworld" class="relative w-full h-auto object-cover rounded-xl shadow-2xl border-4 border-brand-white">
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl md:text-5xl font-serif font-black text-brand-navy mb-2">Creating Skills.</h2>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-brand-magenta italic mb-8">Building Futures.</h2>
+                    
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Preshworld is a dual-purpose culinary enterprise located in the heart of Protea Glen, Soweto. We operate both as an <strong class="text-brand-magenta">Accredited Culinary Academy</strong> and an <strong class="text-brand-magenta">Exquisite Bakery & Confectionery</strong>.
+                    </p>
+                    
+                    <blockquote class="border-l-4 border-brand-magenta pl-6 py-2 my-8 bg-white shadow-sm rounded-r-lg">
+                        <p class="text-brand-navy font-serif italic text-lg">"Passion in the kitchen. Excellence in everything we do."</p>
+                    </blockquote>
+                    
+                    <p class="text-gray-700 mb-8 leading-relaxed">
+                        We believe that baking is both an art and a science. Our bakery delivers top-tier confections made with love and precision. Meanwhile, our academy is dedicated to providing accredited, high-quality education to aspiring bakers and chefs. From complete beginners to advanced students wanting to start their own bakery businesses, Preshworld is the beginning of something sweet, inspiring, and extraordinary.
+                    </p>
+                    
+                    <a href="#contact" class="inline-flex items-center gap-2 bg-brand-navy text-brand-white font-bold py-3 px-8 rounded-full hover:bg-gray-800 transition shadow-md">
+                        Contact Us Today <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bakery Section (Products) -->
+    <section id="bakery" class="py-20 bg-brand-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <span class="text-brand-magenta font-bold tracking-widest uppercase text-sm mb-2 block">Exquisite Confectionery</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-black text-brand-navy mb-6">Our Bakery</h2>
+                <p class="text-gray-600 text-lg">From everyday treats to majestic celebration cakes, everything is preciously made and preciously done.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                
+                <!-- Product 1 -->
+                <div class="bg-brand-pink rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="Everyday Bakes.jpg" alt="Everyday Bakes" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-serif font-bold text-brand-navy mb-3">Everyday Bakes</h3>
+                        <p class="text-gray-600 text-sm mb-6">Freshly baked scones, biscuits, bread, and rolls perfect for any day of the week.</p>
+                        <a href="https://wa.me/27782044659?text=Hi%2C%20I%20would%20like%20to%20order%20from%20your%20Everyday%20Bakes." target="_blank" class="block w-full bg-brand-navy text-brand-white font-bold py-2.5 rounded-full hover:bg-brand-magenta transition text-sm">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-brand-pink rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="Decadent Desserts.jpg" alt="Decadent Desserts" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-serif font-bold text-brand-navy mb-3">Decadent Desserts</h3>
+                        <p class="text-gray-600 text-sm mb-6">Rich cheesecakes, cupcakes, and custom vanilla & chocolate cakes.</p>
+                        <a href="https://wa.me/27782044659?text=Hi%2C%20I%20would%20like%20to%20order%20Decadent%20Desserts." target="_blank" class="block w-full bg-brand-navy text-brand-white font-bold py-2.5 rounded-full hover:bg-brand-magenta transition text-sm">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-brand-pink rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="Sculpted & Fondant Cakes.jpg" alt="Sculpted & Fondant Cakes" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-serif font-bold text-brand-navy mb-3">Sculpted Cakes</h3>
+                        <p class="text-gray-600 text-sm mb-6">Beautiful fondant cakes and mirror glaze creations for special events.</p>
+                        <a href="https://wa.me/27782044659?text=Hi%2C%20I%20would%20like%20to%20order%20a%20Sculpted%20Cake." target="_blank" class="block w-full bg-brand-navy text-brand-white font-bold py-2.5 rounded-full hover:bg-brand-magenta transition text-sm">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-brand-pink rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="Custom Celebration Cakes.jpg" alt="Custom Celebration Cakes" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-serif font-bold text-brand-navy mb-3">Celebration Cakes</h3>
+                        <p class="text-gray-600 text-sm mb-6">Masterpieces crafted with exquisite icing techniques for weddings and parties.</p>
+                        <a href="https://wa.me/27782044659?text=Hi%2C%20I%20would%20like%20to%20order%20a%20Celebration%20Cake." target="_blank" class="block w-full bg-brand-navy text-brand-white font-bold py-2.5 rounded-full hover:bg-brand-magenta transition text-sm">Order Now</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Section (Services) -->
+    <section id="classes" class="py-20 bg-brand-navy text-brand-white relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-magenta rounded-full mix-blend-multiply filter blur-3xl opacity-30 transform translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-brand-magenta rounded-full mix-blend-multiply filter blur-3xl opacity-30 transform -translate-x-1/2 translate-y-1/2"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <span class="text-brand-magenta font-bold tracking-widest uppercase text-sm mb-2 block">Accredited Education</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-black mb-6">Grand Opening Specials</h2>
+                <p class="text-gray-300 text-lg">Join our comprehensive baking classes. All tools, hairnets, aprons, and recipe books are provided!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                
+                <!-- Class 1: Beginners -->
+                <div class="bg-white text-brand-navy rounded-2xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition duration-300 flex flex-col">
+                    <img src="Beginners baking.jpg" alt="Beginners Baking Class" class="w-full h-48 object-cover">
+                    <div class="p-8 flex-grow flex flex-col">
+                        <div class="bg-brand-magenta text-white text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full self-start mb-4">One Week Course</div>
+                        <h3 class="text-2xl font-serif font-black mb-1 text-brand-magenta">BEGINNERS</h3>
+                        <p class="text-gray-500 font-semibold mb-6">Learn Baking</p>
+                        
+                        <ul class="space-y-3 mb-8 flex-grow">
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>All type of scones</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Cupcakes</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Custom vanilla & choc cakes</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Biscuits and many more</span></li>
+                        </ul>
+                        
+                        <div class="border-t border-gray-200 pt-6 mt-auto">
+                            <div class="flex justify-between items-end mb-6">
+                                <div>
+                                    <p class="text-xs text-gray-400 font-bold uppercase">Normal Price</p>
+                                    <p class="text-lg line-through text-gray-500 font-serif">R5 500</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-xs text-brand-magenta font-bold uppercase animate-pulse">Special Price</p>
+                                    <p class="text-3xl font-black text-brand-magenta font-serif">R3 000</p>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/27782044659?text=Hi%2C%20I%20want%20to%20register%20for%20the%20Beginners%20Baking%20Class." target="_blank" class="block w-full bg-brand-magenta text-white font-bold py-3 rounded-full hover:bg-pink-800 transition text-center shadow-md">Book This Class</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class 2: Intermediate -->
+                <div class="bg-white text-brand-navy rounded-2xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition duration-300 flex flex-col relative">
+                    <div class="absolute top-0 right-0 bg-yellow-400 text-brand-navy text-xs font-black px-4 py-1 rounded-bl-lg z-10 shadow">POPULAR</div>
+                    <img src="Intermediate baking.jpg" alt="Intermediate Baking Class" class="w-full h-48 object-cover">
+                    <div class="p-8 flex-grow flex flex-col">
+                        <div class="bg-brand-navy text-white text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full self-start mb-4">Two Weeks Course</div>
+                        <h3 class="text-2xl font-serif font-black mb-1 text-brand-navy">INTERMEDIATE</h3>
+                        <p class="text-gray-500 font-semibold mb-6">Improve Techniques</p>
+                        
+                        <ul class="space-y-3 mb-8 flex-grow">
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Bread & Rolls</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Cheese Cake & Desserts</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Piping Borders Rosettes</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Frosting, Icing tech and many more</span></li>
+                        </ul>
+                        
+                        <div class="border-t border-gray-200 pt-6 mt-auto">
+                            <div class="flex justify-between items-end mb-6">
+                                <div>
+                                    <p class="text-xs text-gray-400 font-bold uppercase">Normal Price</p>
+                                    <p class="text-lg line-through text-gray-500 font-serif">R8 500</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-xs text-brand-magenta font-bold uppercase animate-pulse">Special Price</p>
+                                    <p class="text-3xl font-black text-brand-magenta font-serif">R5 500</p>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/27782044659?text=Hi%2C%20I%20want%20to%20register%20for%20the%20Intermediate%20Baking%20Class." target="_blank" class="block w-full bg-brand-navy text-white font-bold py-3 rounded-full hover:bg-gray-800 transition text-center shadow-md">Book This Class</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class 3: Advance -->
+                <div class="bg-white text-brand-navy rounded-2xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition duration-300 flex flex-col">
+                    <img src="Advance baking.jpg" alt="Advance Baking Class" class="w-full h-48 object-cover">
+                    <div class="p-8 flex-grow flex flex-col">
+                        <div class="bg-gray-800 text-white text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full self-start mb-4">One Month Course</div>
+                        <h3 class="text-2xl font-serif font-black mb-1 text-gray-800">ADVANCE</h3>
+                        <p class="text-gray-500 font-semibold mb-6">Start Bakery Business</p>
+                        
+                        <ul class="space-y-3 mb-8 flex-grow">
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Sculpted cakes</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Macarronis (Macarons)</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Mirror Glaze</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Fondant Cakes and many more</span></li>
+                        </ul>
+                        
+                        <div class="border-t border-gray-200 pt-6 mt-auto">
+                            <div class="flex justify-between items-end mb-6">
+                                <div>
+                                    <p class="text-xs text-gray-400 font-bold uppercase">Normal Price</p>
+                                    <p class="text-lg line-through text-gray-500 font-serif">R13 000</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-xs text-brand-magenta font-bold uppercase animate-pulse">Special Price</p>
+                                    <p class="text-3xl font-black text-brand-magenta font-serif">R10 500</p>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/27782044659?text=Hi%2C%20I%20want%20to%20register%20for%20the%20Advance%20Baking%20Class." target="_blank" class="block w-full bg-gray-800 text-white font-bold py-3 rounded-full hover:bg-black transition text-center shadow-md">Book This Class</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-brand-pink">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-brand-magenta font-bold tracking-widest uppercase text-sm mb-2 block">Our Portfolio</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-black text-brand-navy mb-4">Gallery</h2>
+                <p class="text-gray-600 text-lg">A glimpse into our kitchen, classes, and exquisite creations.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+                <div class="overflow-hidden rounded-xl shadow-md group bg-white aspect-square relative">
+                    <img src="gallery-1.jpg" alt="Gallery Image 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-brand-navy/10 group-hover:bg-transparent transition duration-300"></div>
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-md group bg-white aspect-square relative">
+                    <img src="gallery 2.webp" alt="Gallery Image 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-brand-navy/10 group-hover:bg-transparent transition duration-300"></div>
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-md group bg-white aspect-square relative">
+                    <img src="gllery 4.webp" alt="Gallery Image 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-brand-navy/10 group-hover:bg-transparent transition duration-300"></div>
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-md group bg-white aspect-square relative">
+                    <img src="gallery 5.webp" alt="Gallery Image 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-brand-navy/10 group-hover:bg-transparent transition duration-300"></div>
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-md group bg-white aspect-square relative">
+                    <img src="gallery 6.jpg" alt="Gallery Image 5" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-brand-navy/10 group-hover:bg-transparent transition duration-300"></div>
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-md group bg-white aspect-square relative">
+                    <img src="Custom Celebration Cakes.jpg" alt="Gallery Image 6" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-brand-navy/10 group-hover:bg-transparent transition duration-300"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white border-t border-brand-pink">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-16 max-w-6xl mx-auto">
+                <!-- Contact Details -->
+                <div class="lg:w-1/2">
+                    <span class="text-brand-magenta font-bold tracking-widest uppercase text-sm mb-2 block">Get in Touch</span>
+                    <h2 class="text-4xl md:text-5xl font-serif font-black text-brand-navy mb-6">Let's Connect</h2>
+                    <p class="text-gray-600 mb-10 text-lg">Ready to order a cake or enroll in our academy? Reach out to us today and let's make it happen.</p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-pink flex items-center justify-center text-brand-magenta text-xl flex-shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-navy text-lg">Visit Us</h4>
+                                <p class="text-gray-600 mt-1">3 Wattle Street, Protea Glen<br>Opposite Protea Glen Mall, Soweto</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-pink flex items-center justify-center text-brand-magenta text-xl flex-shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-navy text-lg">Call Us</h4>
+                                <div class="mt-1 space-y-1">
+                                    <a href="tel:0782044659" class="block text-gray-600 hover:text-brand-magenta transition">078 204 4659</a>
+                                    <a href="tel:0698572776" class="block text-gray-600 hover:text-brand-magenta transition">069 857 2776</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form / WhatsApp Fallback -->
+                <div class="lg:w-1/2">
+                    <div class="bg-brand-navy text-white p-10 rounded-2xl shadow-xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-magenta rounded-full mix-blend-multiply filter blur-2xl opacity-50 transform translate-x-1/2 -translate-y-1/2"></div>
+                        
+                        <h3 class="text-2xl font-serif font-bold mb-6 relative z-10">Send an Enquiry</h3>
+                        <form id="contact-form" class="space-y-5 relative z-10">
+                            <div>
+                                <input type="text" id="form-name" placeholder="Your Name" required class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-brand-magenta focus:ring-1 focus:ring-brand-magenta text-white placeholder-gray-400 transition">
+                            </div>
+                            <div>
+                                <input type="tel" id="form-phone" placeholder="Your Phone Number" required class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-brand-magenta focus:ring-1 focus:ring-brand-magenta text-white placeholder-gray-400 transition">
+                            </div>
+                            <div>
+                                <select id="form-interest" class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-brand-magenta focus:ring-1 focus:ring-brand-magenta text-gray-400 transition appearance-none">
+                                    <option value="" disabled selected>What are you interested in?</option>
+                                    <option value="Bakery Order" class="text-brand-navy">Bakery Order</option>
+                                    <option value="Beginners Class" class="text-brand-navy">Beginners Baking Class</option>
+                                    <option value="Intermediate Class" class="text-brand-navy">Intermediate Baking Class</option>
+                                    <option value="Advance Class" class="text-brand-navy">Advance Baking Class</option>
+                                    <option value="Other Enquiry" class="text-brand-navy">Other Enquiry</option>
+                                </select>
+                            </div>
+                            <div>
+                                <textarea id="form-message" rows="4" placeholder="How can we help you?" class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-brand-magenta focus:ring-1 focus:ring-brand-magenta text-white placeholder-gray-400 transition resize-none"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-brand-magenta text-white font-bold py-3.5 rounded-lg hover:bg-pink-800 transition flex justify-center items-center gap-2 shadow-lg">
+                                <i class="fa-brands fa-whatsapp text-xl"></i> Send via WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-navy text-white pt-16 pb-8 border-t-4 border-brand-magenta">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="logo.png" alt="Preshworld Logo" class="h-10 w-10 rounded-full border border-brand-magenta object-cover bg-white">
+                        <div class="flex flex-col justify-center">
+                            <span class="text-xl font-black text-white leading-none tracking-tight">PRESHWORLD</span>
+                            <span class="text-[10px] font-semibold text-brand-magenta tracking-widest uppercase">Culinary Academy</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Passion in the kitchen. Excellence in everything we do. An accredited culinary academy and exquisite bakery in Protea Glen.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://wa.me/27782044659" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-magenta transition">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                        <a href="tel:0782044659" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-magenta transition">
+                            <i class="fa-solid fa-phone text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-serif font-bold mb-6 border-b border-white/10 pb-2 inline-block">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li><a href="#home" class="hover:text-brand-magenta transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-brand-magenta"></i> Home</a></li>
+                        <li><a href="#about" class="hover:text-brand-magenta transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-brand-magenta"></i> About Us</a></li>
+                        <li><a href="#bakery" class="hover:text-brand-magenta transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-brand-magenta"></i> Bakery Products</a></li>
+                        <li><a href="#classes" class="hover:text-brand-magenta transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-brand-magenta"></i> Baking Classes</a></li>
+                        <li><a href="#gallery" class="hover:text-brand-magenta transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-xs text-brand-magenta"></i> Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-serif font-bold mb-6 border-b border-white/10 pb-2 inline-block">Our Services</h4>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-magenta text-xs"></i> Everyday Bakes</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-magenta text-xs"></i> Celebration Cakes</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-magenta text-xs"></i> Beginners Baking Class</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-magenta text-xs"></i> Intermediate Class</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-magenta text-xs"></i> Advance Bakery Business</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-serif font-bold mb-6 border-b border-white/10 pb-2 inline-block">Contact Info</h4>
+                    <ul class="space-y-4 text-gray-300 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand-magenta"></i>
+                            <span>3 Wattle Street, Protea Glen<br>Opposite Protea Glen Mall</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone mt-1 text-brand-magenta"></i>
+                            <div>
+                                <a href="tel:0782044659" class="block hover:text-brand-magenta transition">078 204 4659</a>
+                                <a href="tel:0698572776" class="block hover:text-brand-magenta transition mt-1">069 857 2776</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2026 Preshworld Culinary Academy & Bakery. All rights reserved.</p>
+                <p class="mt-2 md:mt-0 font-serif italic">Preciously made, preciously done.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // WhatsApp Form Handler
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const phone = document.getElementById('form-phone').value;
+            const interest = document.getElementById('form-interest').value;
+            const message = document.getElementById('form-message').value;
+
+            let text = `Hello Preshworld, I have an enquiry from the website:%0A%0A`;
+            text += `*Name:* ${name}%0A`;
+            text += `*Phone:* ${phone}%0A`;
+            if (interest) text += `*Interested In:* ${interest}%0A`;
+            if (message) text += `*Message:* ${message}%0A`;
+
+            window.open(`https://wa.me/27782044659?text=${text}`, '_blank');
+        });
+    </script>
+</body>
+</html>
